@@ -18,7 +18,7 @@ if total % 6 == 0:
     kat = pet * 4
     ser = pet
 
-    print(total, "->", pet, kat, ser, sep=" ")
+    print(total, "->", pet, kat, ser)
 else:
     print("Введенное S не подходит по условию задачи.")
 
