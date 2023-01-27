@@ -14,7 +14,7 @@ print("Введите количество желаемых долек k:")
 k = int(input())
 
 
-if (k % n == 0 and m > k//n) or (k % m == 0 and n > k//m):
+if (k % n == 0 and m >= k//n) or (k % m == 0 and n >= k//m):
     print(n, m, k, "-> yes")
 else:
     print(n, m, k, "-> no")
