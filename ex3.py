@@ -11,23 +11,14 @@ num = int(input())
 if num > 999999: # Проверка номера. Номер не может содержать больше 6 цифр. Меньше 6 -> первые числа - нули
     print("Ошибка ввода")
     exit()
-tic_num = num
 
-right_side = 0
-i = 0
-while i < 3:
-    right_side+= num % 10
-    num//=10
-    i+=1
+left_side = num // 1000
+right_side = num % 1000
 
-left_side = 0
-i = 0
-while i < 3:
-    left_side+= num % 10
-    num//=10
-    i+=1
+left_side_sum = left_side // 100 + left_side // 10 % 10 + left_side % 10 % 10
+right_side_sum = right_side // 100 + right_side // 10 % 10 + right_side % 10 % 10
 
-if left_side == right_side:
-    print(tic_num, "-> yes")
+if left_side_sum == right_side_sum:
+    print(num, "-> yes")
 else:
-    print(tic_num, "-> no")
+    print(num, "-> no")
